@@ -156,7 +156,7 @@ h1, h2, h3, .card-title {
 h1 {
     font-size: 2.2rem;
     font-weight: 600;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.05rem;
     line-height: 1.1;
     margin-bottom: 0.75rem;
 }
@@ -345,10 +345,10 @@ h2 {
 
 .skill-label {
     display: block;
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 1rem;
+    color: var(--text-secondary);
     margin-bottom: 0.6rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
 }
 
 .skills-grid {
@@ -408,7 +408,7 @@ h2 {
 .card-date {
     color: var(--text-muted);
     font-size: 0.8rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
 }
 
 /* Card Link Wrapper */
