@@ -225,12 +225,54 @@ h1 {
 }
 
 .btn-primary {
-    justify-content: space-between;
-    padding: 0.65rem 0.85rem;
-    background: linear-gradient(180deg, #13606a 0%, #0d4b53 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    /* Ensure height matches email buttons exactly */
+    height: 40px; /* Or match the specific px height/padding of your email button */
+    padding: 0 0.85rem; /* Remove top/bottom padding so height controls vertical sizing */
+    box-sizing: border-box;
+    
+    background: linear-gradient(180deg, rgba(23, 133, 148, 0.85) 0%, rgba(13, 75, 83, 0.85) 100%);
     color: #ffffff;
-    border: 1px solid rgba(20, 184, 166, 0.3);
+    border: 1px solid rgba(20, 184, 166, 0.35);
+    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1;
+    
+    /* Glass Effect & Transitions */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+/* Maintain proper icon sizing and alignment */
+.btn-primary svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Hover and Active States */
+.btn-primary:hover {
+    background: linear-gradient(180deg, rgba(28, 153, 169, 0.95) 0%, rgba(15, 88, 97, 0.95) 100%);
+    border-color: rgba(20, 184, 166, 0.75);
+    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-primary:hover svg {
+    transform: scale(1.1);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(15, 118, 110, 0.3);
 }
 
 .btn-secondary {
@@ -369,6 +411,20 @@ h2 {
     font-family: var(--font-mono);
 }
 
+/* Card Link Wrapper */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Optional: Subtle lift state when hovering over a card */
+.card-link:hover .glass-card {
+    border-color: rgba(20, 184, 166, 0.5);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
 ul {
     padding-left: 1.2rem;
     color: var(--text-secondary);
@@ -377,6 +433,38 @@ ul {
 
 li {
     margin-bottom: 0.4rem;
+}
+
+/* Projects Section Styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin: 0.85rem 0 1.25rem 0;
+}
+
+/* Tech Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    background: rgba(20, 184, 166, 0.12);
+    color: #14b8a6;
+    border: 1px solid rgba(20, 184, 166, 0.25);
+    border-radius: 12px;
+    font-weight: 500;
 }
 
 footer {
