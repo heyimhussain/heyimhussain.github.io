@@ -1,5 +1,0 @@
-- highlight resume button
-- link companworky websites to work experience
-- add a projects section
-- add itch io link
-- publish to GitHub pages
